@@ -1,11 +1,12 @@
+import { Sidebar } from "./components/shared/Sidebar"
 
 function App() {
 
 
   return (
-    <h1 className="bg-red-500">
-     <p>Hika</p>
-    </h1>
+    <div>
+    <Sidebar/>
+    </div>
   )
 }
 
