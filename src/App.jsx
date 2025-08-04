@@ -7,6 +7,7 @@ import {
   RiPieChartLine,
   RiCloseLine,
   RiSearch2Line,
+  RiArrowDownSLine,
 } from "react-icons/ri";
 
 function App() {
@@ -37,12 +38,12 @@ function App() {
           {showMenu ? <RiCloseLine /> : <RiMenu2Line />}
         </button>
       </nav>
-      <main className="lg:pl-28 grid grid-cols-1 lg:grid-cols-8">
+      <main className="lg:pl-28 grid grid-cols-1 lg:grid-cols-8 p-4">
         <div className="lg:col-span-6">
           {/* Header*/}
-          <header className="p-4">
+          <header className="">
             {/* Title and Search*/}
-            <div className="flex flex-col gap-4 mb-6">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
               <div>
                 <h1 className="text-xl text-gray-300">Jeager Resto</h1>
                 <p className="text-gray-500">10 abril 2025</p>
@@ -59,7 +60,7 @@ function App() {
               </form>
             </div>
             {/* Tabs */}
-            <nav className="text-gray-300 flex items-center justify-between border-b">
+            <nav className="text-gray-300 flex items-center justify-between md:justify-start md:gap-8 border-b mb-6">
               <a
                 href="#"
                 className="relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-[#ec7c6a]
@@ -77,7 +78,16 @@ function App() {
                 Grill
               </a>
             </nav>
+            
           </header>
+          {/* Title content*/}
+            <div className="flex items-center justify-between ">
+              <h2 className="text-xl text-gray-300">Chosose Dishes</h2>
+              <button className="flex items-center gap-4 text-gray-300 bg-[#1F1D2B] py-2 px-4 rounded-lg">
+                <RiArrowDownSLine /> Dine in
+              </button>
+            </div>
+          {/* Content */}
         </div>
         <div className="lg:col-span-2 fixed lg:static right-0">Carritos</div>
       </main>
